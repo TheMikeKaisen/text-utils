@@ -1,7 +1,8 @@
 //import logo from './logo.svg';
 import './App.css';
+import About from './components/About';
 import Navbar from './components/Navbar';
-import TextForm from './components/TextForm';
+//import TextForm from './components/TextForm';
 
 import React from 'react';
 
@@ -13,7 +14,8 @@ function App() {
    {/* if no props are passed to the Navbar, then default values set would be displayed */}
    {/* <Navbar/> */}
     <div className = "container my-3">  
-    <TextForm heading="Enter the text to Analyze."/>
+    {/* <TextForm heading="Enter the text to Analyze."/> */}
+    <About/>
    </div>
    </>
   );
