@@ -26,23 +26,23 @@ export default function TextForm(props) {
     //setText("new text"); // this is the right way to update the changes.
   return (
     <>
-    <div>
+    <div style={{color: props.mode === 'dark'?'white':'#042743'}}>
         <h1>{props.heading}</h1>
         <div className="mb-3">
         <label htmlFor="exampleFormControlTextarea1" className="form-label">Text area.</label>
-        <textarea className="form-control" id="exampleFormControlTextarea1" rows="8" value={text} onChange={handleOnChange}></textarea>
+        <textarea className="form-control" id="exampleFormControlTextarea1" rows="8" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode === 'dark'?'grey':'white'}}></textarea>
         </div>
         <button className="btn btn-primary mx-2" onClick={handleUpClick}>Change to Upper Case</button>
         <button className="btn btn-primary mx-2" onClick={handleLoClick}>Change to Lower Case</button>
 
     </div>
-
-    <h1 className="container my-5">Your text summary</h1>
-    <p>{text.split(" ").length} words and {text.length} characters </p>
-    <p>{0.008 * text.split(" ").length} minuts read</p>
-    <h2>preview</h2>
-    <p>{text}</p>
-    </>
-
+    <div style={{color: props.mode === 'dark'?'white':'#042743'}}>
+        <h1 className="container my-5">Your text summary</h1>
+        <p>{text.split(" ").length} words and {text.length} characters </p>
+        <p>{0.008 * text.split(" ").length} minuts read</p>
+        <h2>preview</h2>
+        <p>{text}</p>
+    </div>
+</>
   )
 }
